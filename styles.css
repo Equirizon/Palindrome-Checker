@@ -106,3 +106,34 @@ body {
 .hidden {
     display: none;
 }
+
+@media (max-width: 600px) {
+    .form {
+        width: 75vw;
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        margin: 10vh auto;
+    }
+
+    .form input {
+        width: 65%;
+        font-size: 1rem;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    #check-btn {
+        width: 50%;
+        padding: 0.8rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .form input[type="text"] {
+        font-size: 1rem;
+    }
+}
