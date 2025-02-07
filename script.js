@@ -9,13 +9,12 @@ button.addEventListener('click', () => {
 
 const palindromeEngine = (word) => {
     console.log('-- start --');
-    const regEx = /[^a-zA-Z]/ig
-    const filter = word.replace(regEx, '');
+    const regEx = /[^a-z]/ig;
+    const filter = word.replace(regEx, '').toLowerCase(); //removes non-letter characters
     const arr = Array.from(filter).reverse();
     let reversed = '';
 
     console.log(`RegEx: '${word.match(regEx)}'`);
-    console.log(`Reversed array: [${arr}]`)
 
     for (const letters of arr) {
         reversed += letters;
@@ -24,12 +23,14 @@ const palindromeEngine = (word) => {
     console.log(`Word: '${filter}'`);
     console.log(`Reversed word: '${reversed}'`);
 
-    if (word.length == 1 || filter === reversed) {
+    if (word.length == 1 || filter === reversed.toLowerCase()) { //checks if word is a palindrome
         output.textContent = `"${word}" is a palindrome!`;
+        console.log("Palindrome: True");
     }    
 
     else {
         output.textContent = `"${word}" is NOT a palindrome!`;
+        console.log("Palindrome: False");
     }
 }
 
