@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Cinzel:wght@500&family=DM+Sans:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --text-color: #593d7d;
+    --font-family: Montserrat;
+    --background: #470086;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-family), Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+}
+
+.logo {
+    display: block;
+    margin: 1rem auto;
+    width: 100px;
+    height: auto;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: max-content;
+    min-height: 10rem;
+    color: var(--text-color);
+    width: 30rem;
+    padding: 2rem 3rem;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translate(0, -10%);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form input {
+    border: 1px solid #6956f4;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    padding: .5rem;
+    width: 70%;
+}
+
+.form input, .form span, #check-btn {
+    margin: 1rem 0;
+}
+
+.form input[type="text"] {
+    font-size: 1.3rem;
+}
+
+#result {
+    background-color: #3f3b63;
+    color: #fff;
+    border: none;
+    width: calc(100% - 1rem);
+    border-radius: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin: 0.67em 0; /* Same margin height as default h1 */
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0 1rem 1rem;
+    background-color: #5a5c63;
+    color: #e8e5ff;
+    border-radius: 15px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#check-btn {
+    background-color: #6956f4;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#check-btn:hover {
+    transform: scale(1.1);
+    background-color: #5745d4;
+}
+
+.hidden {
+    display: none;
+}
