@@ -1,6 +1,7 @@
 const button = document.getElementById("check-btn");
 const input = document.getElementById("text-input");
 const output = document.getElementById("result");
+const form = document.querySelector(".hidden");
 
 button.addEventListener('click', () => {
     const word = input.value;
@@ -8,7 +9,11 @@ button.addEventListener('click', () => {
     });
 
 const palindromeEngine = (word) => {
-    const regEx = /[^a-z]/ig;
+
+    console.log('-- start --');
+    form.classList.remove("hidden");
+    const regEx = /[^a-z0-9]/ig;
+
     const filter = word.replace(regEx, '').toLowerCase(); //removes non-letter characters
     const arr = Array.from(filter).reverse();
     let reversed = '';
