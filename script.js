@@ -11,7 +11,7 @@ button.addEventListener('click', () => {
 const palindromeEngine = (word) => {
     console.log('-- start --');
     form.classList.remove("hidden");
-    const regEx = /[^a-z]/ig;
+    const regEx = /[^a-z0-9]/ig;
     const filter = word.replace(regEx, '').toLowerCase(); //removes non-letter characters
     const arr = Array.from(filter).reverse();
     let reversed = '';
