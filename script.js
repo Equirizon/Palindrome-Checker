@@ -16,14 +16,9 @@ const palindromeEngine = (word) => {
     const arr = Array.from(filter).reverse();
     let reversed = '';
 
-    console.log(`RegEx: '${word.match(regEx)}'`);
-
     for (const letters of arr) {
         reversed += letters;
     }
-
-    console.log(`Word: '${filter}'`);
-    console.log(`Reversed word: '${reversed}'`);
 
     if (word.length == 1 || filter === reversed.toLowerCase()) { //checks if word is a palindrome
         output.textContent = `"${word}" is a palindrome!`;
@@ -35,5 +30,3 @@ const palindromeEngine = (word) => {
         console.log("Palindrome: False");
     }
 }
-
-console.log("done!");
