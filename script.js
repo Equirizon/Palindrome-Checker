@@ -9,9 +9,11 @@ button.addEventListener('click', () => {
     });
 
 const palindromeEngine = (word) => {
+
     console.log('-- start --');
     form.classList.remove("hidden");
     const regEx = /[^a-z0-9]/ig;
+
     const filter = word.replace(regEx, '').toLowerCase(); //removes non-letter characters
     const arr = Array.from(filter).reverse();
     let reversed = '';
@@ -22,11 +24,9 @@ const palindromeEngine = (word) => {
 
     if (word.length == 1 || filter === reversed.toLowerCase()) { //checks if word is a palindrome
         output.textContent = `"${word}" is a palindrome!`;
-        console.log("Palindrome: True");
     }    
 
     else {
         output.textContent = `"${word}" is NOT a palindrome!`;
-        console.log("Palindrome: False");
     }
 }
