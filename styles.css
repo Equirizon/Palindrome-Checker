@@ -47,10 +47,12 @@ body {
     width: 30rem;
     padding: 2rem 3rem;
     margin: auto;
-    background: linear-gradient(135deg, #e4effe, #cfdff9);
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transform: translate(0, -10%);
+    background: linear-gradient(270deg, #e69aff, #aa75ff, #975cff);
+    background-size: 400% 400%;
+    animation: gradient-animation 12s ease infinite;
 }
 
 .input-container {
@@ -163,6 +165,34 @@ body {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes text-glow {
+    0% {
+        color: #d8f3d8;
+    }
+    50% {
+        color: #6a50ff;
+    }
+    100% {
+        color: #d8f3d8;
+    }
+}
+
+.glowing-text {
+    animation: text-glow 12s infinite ease;
 }
 
 @media (orientation: landscape) and (max-width: 1000px) {
