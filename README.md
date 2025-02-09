@@ -38,7 +38,7 @@ project-folder/
 4. The result is displayed, indicating whether the input is a palindrome.
 
 ## Demo
-To see the project in action, open `index.html` in your preferred browser.
+To see the project in action, visit [page](https://equirizon.github.io/Palindrome-Checker/) in your browser.
 
 ## Author
 Created by [Equirizon](https://github.com/Equirizon)
